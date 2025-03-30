@@ -9,14 +9,13 @@
         table, td {
             background-color:steelblue;
         }
-        #mainHeader {
-    
-        }
       </style>
     </head>
-    <body>
-      <h1>Lists as Bottom Navigation Menu</h1>
+    <body id="dmH">
+      <h1 id="dmB">Lists as Bottom Navigation Menu</h1>
+      <button type="button" onclick="darkMode()">Dark Mode</button>
 
+      
     <!-- bottom menu -->
       <table>
         <tr>
@@ -43,6 +42,13 @@
           </td>
         </tr>
       </table>
+
+        <script>
+          function darkMode() {
+          document.getElementById("dmB").style.backroundColor = black;
+          document.getElemrntById("dmH").style.color = white;
+          }
+        </script>
       
     </body>
   </html>

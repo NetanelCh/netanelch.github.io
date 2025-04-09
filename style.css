@@ -1,0 +1,7 @@
+#storageApi a {
+    background-color:orange;
+    padding:5px;
+  }
+#storageApi a:hover {
+    background-color:tomato;
+}

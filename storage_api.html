@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebStorageApi</title>
+    </head>
+    <body>
+        <h1>WebStorageApi</h1>
+        <p>the result is: <span id="result" style="padding:5px;"></span></p>
+
+        <script>
+            const x = document.getElementById("result");
+            if (typeof(Storage) !== "undefined") {
+                sessionStorage.setItem("last name", "NetCh");
+                sessionStorage.setItem("background", "steelblue");
+
+                x.innerHTML = sessionStorage.getItem("last name");
+                x.style.backgroundColor = sessionStorage.getItem("background");
+            } else {
+                x.innerHTML = "the browser did not support for that";
+            }
+
+
+        </script>
+    </body>
+</html>

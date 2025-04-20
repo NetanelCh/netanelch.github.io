@@ -5,6 +5,16 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="style.css">
       <style>
+        #Header {
+          position:fixed;
+          border:3px solid black;
+          background-color:white;
+          max-width: 2000px;
+          margin:auto;
+        }
+        #ContentCon {
+          position:relative;
+        }
         ul {
           list-style-type: none;
         }
@@ -24,10 +34,18 @@
         a:hover {
           background-color: orangered;
         }
+
+        #paddingDiv {
+          padding:1800px;
+        }
       </style>
     </head>
     <body id="dmB">
-      <h1 id="dmH">Lists as Bottom Navigation Menu</h1>
+      <header id="Header">
+        <h1 id="dmH">Lists as Bottom Navigation Menu</h1>
+      </header>
+
+    <section id="ContentCon">
       <button type="button" onclick="dm()">Dark Mode</button>
 
       
@@ -57,11 +75,12 @@
           </td>
         </tr>
       </table>
-
+    </section>
+      <div id="paddingDiv"></div>
         <script>
           function dm() {
             document.getElementById("dmH").style.color = "white";
-          document.getElementById("dmB").style.backgroundColor = "black";
+            document.getElementById("dmB").style.backgroundColor = "black";
           }
         </script>
       

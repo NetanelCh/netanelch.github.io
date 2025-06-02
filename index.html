@@ -1,64 +1,59 @@
-<DOCTYPE html>
+<!DOCTYPE html>
   <html>
     <head>
-      <title>MyWebsite</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="style.css">
+      <style>
+        body {margin:0;background-color:lightyellow;}
+
+        /* Navbar */
+        header.navbar {
+            position:fixed;
+            top:0;
+            width:100%;
+        }
+        
+        ul.navlist {
+            list-style-type:none;
+            padding:0;
+            margin:0;
+            overflow:hidden; 
+            /* ^ return children to the normal flow (BCF or BFC or something like that) */
+            background-color: steelblue;
+        }
+
+        li.navlinks {float:left;}
+
+        li.navlinks a {
+            display:block;
+            text-decoration:none;
+            padding: 15px 25px;
+            color:white;
+        }
+
+        /* Content */
+        section.content {margin-top:48px;}
+
+        /* Footer */
+        footer {
+            position:fixed;
+            bottom:0;
+            width:100%;
+            background-color:powderblue;
+            text-align:center;
+        }
+      </style>
     </head>
     <body>
-      <h1>NetCh</h1>
-      <p>there's is another <a href="2nd_pg.html">page</a></p>
-      <div id="btn">
-        <button type="button" onclick="jsFunction()">Just add iframe to this page</button>
-      </div>
-      <script>
-        function jsFunction() {
-          document.getElementById("div").style.display = "block";
-          document.getElementById("btn").innerHTML = "";
-        }
-      </script>
-      <div id="div" style="display:none;">
-        <iframe src='2nd_pg.html' style='width:100%;height:250px;' title='A Iframe'></iframe>
-      </div>
-      <br>
-
-    <!-- This is a mess! -->
-      <button type="button" onclick="document.getElementById('failed').style.display = 'block';">Somthing I Failed Because i Haven't Learned JavaScript</button>
-      <div id="failed" style="display:none;">
-        <form id="form">
-          <label for="name">Enter Name:</label><br>
-          <input type="text" id="name" name="Name"><br>
-          <label for="age">Enter Age:</label><br>
-          <input type="text" id="age" name="Age"><br>
-          <input type="button" value="Submit" onclick="submit()"><br><br>
-          <input type="button" value="Show Output" onclick="formOut()">
-        </form>
-        <script>
-          function submit() {
-            var from = new FormData(document.getElementById("form"));
-            var fromNameOut = form.get("Name");
-            var formAgeOut = form.get("Age");
-          }
-          
-          function formOut() {
-            var from = new FormData(document.getElementById("form"));
-            var fromNameOut = form.get("Name");
-            var formAgeOut = form.get("Age");
-            document.getElementById("nameText").innerHTML = "Your name is: ";
-            document.getElementById("ageText").innerHTML = "Your age is: ";
-            document.getElementById("nameOut").innerHTML = fromNameOut;
-            document.getElementById("ageOut").innerHTML = formAgeOut;
-          }
-        </script>
-        <div id="formout">
-          <p id="nameText"></p>
-          <p id="nameOut"></p>
-          <p id="ageText"></p>
-          <p id="ageOut"></p>
-        </div>
-      </div>
-    <!-- All the above is so messed up -->
-
-    <p><a href="storage_api.html" id="storageApi">StorageApi Test (This is Work!)</a></p>
+      <header class="navbar">
+        <ul class="navlist">
+          <li class="navlinks"><a href="index.html">Main Page</a></li>
+          <li class="navlinks"><a href="#things">Things That I Created</a></li>
+          <li class="navlinks" style="float:right;"><a href="#about">About</a></li>
+        </ul>
+      </header>
+      <section class="content">
+        <p>Hey, this is my website!</p>
+        <p style="font-size:larger;border:3px solid red;display:inline-block;">Work in Progress</p>
+      </section>
+      <footer><p>footer</p><footer>
     </body>
   </html>

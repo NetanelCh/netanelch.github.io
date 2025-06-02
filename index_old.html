@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>MyWebsite</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <style>
+        ul {
+          list-style-type: none;
+          padding: 0;
+          margin:0;
+          width: 100%;
+        }
+        li {float:left;}
+        li a {
+          display: block;
+          padding: 10 20;
+          background-color:blueviolet;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="2nd_pg.html">Second Page</a></li>
+          <li><a herf="storage_api.html">Storage Api</a></li>
+        </ul>
+      </div>
+      <p>there's is another <a href="2nd_pg.html">page</a></p>
+      <br>
+
+    <!-- This is a mess! -->
+      <button type="button" onclick="document.getElementById('failed').style.display = 'block';">Somthing I Failed Because i Haven't Learned JavaScript</button>
+      <div id="failed" style="display:none;">
+        <form id="form">
+          <label for="name">Enter Name:</label><br>
+          <input type="text" id="name" name="Name"><br>
+          <label for="age">Enter Age:</label><br>
+          <input type="text" id="age" name="Age"><br>
+          <input type="button" value="Submit" onclick="submit()"><br><br>
+          <input type="button" value="Show Output" onclick="formOut()">
+        </form>
+        <script>
+          function submit() {
+            var from = new FormData(document.getElementById("form"));
+            var fromNameOut = form.get("Name");
+            var formAgeOut = form.get("Age");
+          }
+          
+          function formOut() {
+            var from = new FormData(document.getElementById("form"));
+            var fromNameOut = form.get("Name");
+            var formAgeOut = form.get("Age");
+            document.getElementById("nameText").innerHTML = "Your name is: ";
+            document.getElementById("ageText").innerHTML = "Your age is: ";
+            document.getElementById("nameOut").innerHTML = fromNameOut;
+            document.getElementById("ageOut").innerHTML = formAgeOut;
+          }
+        </script>
+        <div id="formout">
+          <p id="nameText"></p>
+          <p id="nameOut"></p>
+          <p id="ageText"></p>
+          <p id="ageOut"></p>
+        </div>
+      </div>
+    <!-- All the above is so messed up -->
+
+    <p><a href="storage_api.html" id="storageApi">StorageApi Test (This is Work!)</a></p>
+    </body>
+  </html>

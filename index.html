@@ -2,11 +2,26 @@
   <html>
     <head>
       <style>
-        body {margin:0;background-color:rgb(246, 246, 255);}
+        html {height: 100%;width: 100%;}
+        body {
+          margin:0;
+          height: inherit;
+          width: inherit;
+          overflow: hidden;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        section {
+          position: relative;
+          height: inherit;
+          width: inherit;
+          background:dodgerblue;
+        }
 
         /* Navbar */
         header.navbar {
             position:fixed;
+            z-index:1;
             top:0;
             width:100%;
         }
@@ -30,11 +45,32 @@
         }
 
         /* Content */
-        section.content {margin-top:48px;}
+        .content {color:white;}
+
+        p#wsL {
+          position: absolute;
+          z-index:0;
+          float:left;
+          left:3vh;
+          top:45vh;
+          writing-mode:sideways-lr;
+
+        }
+
+        p#wsR {
+          position: absolute;
+          z-index:0;
+          float:right;
+          right:3vh;
+          top:45vh;
+          writing-mode:sideways-lr;
+          transform: rotateY(180deg);
+        }
 
         /* Footer */
         footer {
             position:fixed;
+            z-index:1;
             bottom:0;
             width:100%;
             background-color:rgb(94, 150, 202);
@@ -51,9 +87,9 @@
         </ul>
       </header>
       <section class="content">
-        <p>Hey, this is my website!</p>
-        <p style="font-size:larger;border:3px solid red;display:inline-block;">Work in Progress</p>
+        <p id="wsL">Website</p>
+        <p id="wsR"><span id="rtlFix">Website</span></p>
       </section>
-      <footer><p>footer</p><footer>
+      <footer><p>footer</p></footer>
     </body>
   </html>

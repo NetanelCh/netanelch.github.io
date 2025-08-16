@@ -44,18 +44,16 @@
             color:rgb(255, 255, 255);
         }
 
-        /* Content */
-        .content {color:white;text-align:center;}
-
-        h1 {
-          word-wrap: break-word;
-          margin: 0;
-          transition: letter-spacing 1s;
+        /*Iframes */
+        iframe {
+          width: 100%;
+          height: fit-content;
+          border: none;
+          padding: 3px;
+          border-bottom:2px dashed;
+          margin-bottom: 3px;
         }
 
-        h1:hover{
-          letter-spacing: 3vw;
-        }
 
         /* Footer */
         footer {
@@ -71,35 +69,16 @@
     <body>
       <header class="navbar">
         <ul class="navlist">
-          <li class="navlinks" style="background-color: darkblue;"><a href="index.html">Main Page</a></li>
-          <li class="navlinks"><a href="things.html">Things That I Created</a></li>
+          <li class="navlinks"><a href="index.html">Main Page</a></li>
+          <li class="navlinks" style="background-color: darkblue;"><a href="things.html">Things That I Created</a></li>
           <li class="navlinks" style="float:right;"><a href="#about">About</a></li>
         </ul>
       </header>
-      <section class="content">
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-        <h1>Welcome to My Website</h1>
-      </section>
+        <section>
+          <iframe id="loadwheel" src="loadwheel.html">
+
+          </iframe>
+        </section>
       <footer><p>footer</p></footer>
     </body>
   </html>

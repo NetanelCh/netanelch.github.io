@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+        body {
+          margin: 2px;
+          position:absolute;
+        }
+
+        /* Global */
+        .container {
+          /*border: 2px solid black;*/
+          position: absolute;
+          margin:auto;
+          height: 50vh;
+          width: 50vh;
+          animation-name:conrotate;
+          animation-duration:2s;
+          animation-iteration-count:infinite;
+          animation-timing-function:ease-in;
+        }
+
+        .circle {
+          background-color: black;
+          border-radius:50%;
+          width:10vh;
+          height:10vh;
+          margin:auto;
+          animation-name:circlesize;
+          animation-duration:2s;
+          animation-iteration-count:infinite;
+        }
+
+        @keyframes conrotate {
+          from {transform: rotate(0deg);}
+          to {transform: rotate(360deg);}
+        }
+
+        @keyframes circlesize {
+          0% {transform:scale(1,1);}
+          70% {transform:scale(0.5,0.5);}
+          100% {transform:scale(1,1);}
+        }
+
+        /* each circle */
+        #con2,#crcl2 {
+          animation-delay:0.2s;
+        }
+        #con3,#crcl3 {
+          animation-delay:0.4s;
+        }
+        #con4,#crcl4 {
+          animation-delay:0.6s;
+        }
+        #con5,#crcl5 {
+          animation-delay:0.8s;
+        }
+        #con6,#crcl6 {
+          animation-delay:1s;
+        }
+        #con7,#crcl7 {
+          animation-delay:1.2s;
+        }
+        #con8,#crcl8 {
+          animation-delay:1.4s;
+        }
+
+      </style>
+    </head>
+    <body>
+      <div class="container" id="con1">
+        <div class="circle"></div>
+      </div>
+      <div class="container" id="con2">
+        <div class="circle" id="crcl2"></div>
+      </div>
+      <div class="container" id="con3">
+        <div class="circle" id="crcl3"></div>
+      </div>
+      <div class="container" id="con4">
+        <div class="circle" id="crcl4"></div>
+      </div>
+      <div class="container" id="con5">
+        <div class="circle" id="crcl5"></div>
+      </div>
+      <div class="container" id="con6">
+        <div class="circle" id="crcl6"></div>
+      </div>
+      <div class="container" id="con7">
+        <div class="circle" id="crcl7"></div>
+      </div>
+      <div class="container" id="con8">
+        <div class="circle" id="crcl8"></div>
+      </div>
+    </body>
+  </html>
